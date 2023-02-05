@@ -8,7 +8,7 @@ const isAuthAdmin = require('../utils/middlewares/authAdmin.middleware.js');
 
 userRouter.get('/', async (request, response, next) => {
     try {
-        const allUsers = await User.find({}, {password: 0}).sort({role: 1});
+        const allUsers = await User.find({}, {password: 0}).sort({age: 1});
         if (allUsers.length === 0) {
             return response.status(200).json('No hay usuarios registrados');
         }

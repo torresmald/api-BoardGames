@@ -1,10 +1,10 @@
-# API CON COLECCIÓN DE SERIES TV
+# API CON COLECCIÓN DE JUEGOS DE MESA
 
-![Image Movies](https://c7.alamy.com/compes/h7gegn/coleccion-de-16…drados-negros-con-esquinas-redondeadas-h7gegn.jpg)
+![Image Movies](https://i.blogs.es/2b20e0/mariokart/1366_2000.jpeg)
 
- **Proyecto de Base de Datos de películas**     
+ **Proyecto de Base de Datos de Juegos de Mesa*     
 
-Práctica/Proyecto de Back-end que consiste en la creación de una base de datos de una api de películas, realizada con Node.js y MongoAtlas.
+Práctica/Proyecto de Back-end que consiste en la creación de una base de datos de una api de juegos de mesa, realizada con Node.js y MongoAtlas.
 
 ## HECHO CON
 
@@ -19,7 +19,7 @@ Práctica/Proyecto de Back-end que consiste en la creación de una base de datos
 ## INSTALACION
 1. DESCARGA DEL REPOSITORIO
 ```
-git clone https://github.com/torresmald/proyecto-react-api
+git clone https://github.com/torresmald/api-BoardGames.git
 ```
 
 2. INSTALACION DE DEPENDENCIAS UTLIZADAS. 
@@ -49,7 +49,7 @@ git clone https://github.com/torresmald/proyecto-react-api
 
 ## OBJETIVOS DEL PROYECTO
 
-- Se han creado 2 colecciones (users, series)
+- Se han creado 2 colecciones (users, games)
 
 1- Dentro de la carpeta `**models**` se pueden encontrar los "Schemas" con los atributos que quiero guardar en mi base de datos, de cada una de las colecciones; además de indicar, qué atributos son requeridos, únicos, etc.
 En cada una de las colecciones además se ha creado el modelo, que sigue el Schema y que es el que se utiliza cada vez que se añade un elemento (ya que es el que está exportado).
@@ -59,7 +59,7 @@ En cada una de las colecciones además se ha creado el modelo, que sigue el Sche
 3- Dentro de la carpeta `**routes**`, se encuentran la distintas colecciones con sus endpoints, aquí es dónde se realiza el CRUD (Create/Post, Read/Get/ Update/Put, Delete/Delete):
 `**Users**`  --> realizada para el registro, login y logout del usuario
 
- `**Series**` --> se han creado varios endpoints:
+`**Games**` --> se han creado varios endpoints:
 
 
 ## ENDPOINTS DISPONIBLES:
@@ -68,26 +68,26 @@ En cada una de las colecciones además se ha creado el modelo, que sigue el Sche
 ###### <sub>IMAGENES EN FORMATO ÚNICAMENTE PNG, JPG, JPEG, GIF</sub>
 ###### <sub>Las cookies tienen un tiempo de expiracion de 2 horas.</sub>
 
-1.  SERIES
+1.  GAMES
     ```jsx
     1. GET
-    - seriesRouter.get('/' --> OBTENER LISTADO DE TODAS LAS SERIES
-    - seriesRouter.get('/paged' --> LISTADO DE SERIES PAGINADAS EN BLOQUES DE 3 SERIES. 
-    - seriesRouter.get('/title/:title' --> SERIES POR TITULO INDICADO.
+    - gamesRouter.get('/' --> OBTENER LISTADO DE TODS LOS GAMES
+    - gamesRouter.get('/paged' --> LISTADO DE GAMES PAGINADOS EN BLOQUES DE 3 GAMES. 
+    - gamesRouter.get('/title/:title' --> GAMES POR TITULO INDICADO.
     2. POST
-    - seriesRouter.post('/to-cloud' --> AÑADIR UNA SERIE. POSIBILIDAD DE AÑADIR UNA IMAGEN.
+    - gamesRouter.post('/to-cloud' --> AÑADIR UN GAME. POSIBILIDAD DE AÑADIR UNA IMAGEN.
     3. PUT
-    - seriesRouter.put('/:id' --> EDITAR UNA SERIE POR SU ID. 
+    - gamesRouter.put('/:id' --> EDITAR UN GAME POR SU ID. 
     4. DELETE
-    - seriesRouter.delete('/:id' --> ELIMINAR UNA SERIE POR SU ID
+    - gamesRouter.delete('/:id' --> ELIMINAR UN GAME POR SU ID
     ```
 
 2.  USUARIOS
     ```jsx
     1. GET
-    - userRouter.get('/' --> OBTENER LISTADO DE TODOS LOS USUARIOS ORDENADOS POR ROL.
+    - userRouter.get('/' --> OBTENER LISTADO DE TODOS LOS USUARIOS ORDENADOS POR EDAD.
     2. POST
-    - userRouter.post('/register' --> POSIBILIDAD DE REGISTRARSE. SE REQUIERE UN EMAIL, PASSWORD, EDAD Y USERNAME
+    - userRouter.post('/register' --> POSIBILIDAD DE REGISTRARSE. SE REQUIERE UN EMAIL, PASSWORD, EDAD
     - userRouter.post('/login' --> POSIBILIDAD DE LOGUEARSE UNA VEZ REGISTRADO. 
     - userRouter.post('/logout' --> POSIBILIDAD DE DESLOGUEARSE. 
 
@@ -99,7 +99,7 @@ En cada una de las colecciones además se ha creado el modelo, que sigue el Sche
 - db --> con el archivo connect.js - es el encargado de conectar la base de datos a mongoose/MongoDB.
 - errors --> creado el archivo create-error.js para unificar todo el control de errores por un mismo sitio.
 - middlewares --> creados los middlewares de athentication, cloudinary y multer (éste último, lo que hace es preparar el archivo pra poder subirlo).
-- seeds --> en la cual se encuentra, tanto el archivo .json de las películas (dentro de db) como la seed de movies - archivo que inicializa la base de datos.
+- seeds --> en la cual se encuentra, tanto el archivo .json de los games (dentro de db) como la seed de games - archivo que inicializa la base de datos.
 
 6- `**vercel.json**` --> archivo con la configuración necesaria para el depliege de la Api.
 
@@ -113,12 +113,12 @@ En cada una de las colecciones además se ha creado el modelo, que sigue el Sche
 
 ## CONTACTO
 
-- Project Repo: https://github.com/torresmald/Api-Seriestorresmald
+- Project Repo: https://github.com/torresmald
 - Email: jonathan.torresmald@gmail.com
 
 
 
 DIVIERTETE USANDOLA......!!
 
-![Image Movies](https://res.cloudinary.com/dj5hu7p44/image/upload/v1674667453/tenor_oadplg.gif)
+![Image Movies](https://media3.giphy.com/media/R6ZNan8ZHchva/giphy.gif)
 
