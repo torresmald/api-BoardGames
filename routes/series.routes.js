@@ -1,0 +1,111 @@
+const express = require('express');
+const gamesRouter = express.Router();
+const Game = require('../model/Games');
+const createError = require('../utils/errors/createError.js');
+const uploadToCloud = require ('../utils/middlewares/cloudinary.js');
+const upload = require('../utils/middlewares/files.middleware.js');
+
+
+gamesRouter.get('/', async (request, response, next) => {
+    try {
+        const allGames = await Game.find();
+        return response.status(200).json(allGames);
+    } catch (error) {
+        next(error)
+    }
+});
+gamesRouter.get('/paged', async (request, response, next) => {
+    try {
+        let page = request.query.page;
+        const startPage = (page - 1) * 3;
+        const endPage = page * 3;
+        const allGames = await Game.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ year: 1 });
+        if (allGames.length === 0) {
+            return next(createError('No hay Games disponibles', 404))
+        }
+        if (!page) {
+            return next(createError('No se ha indicado un número de página valido', 404))
+        }
+        page = parseInt(page, 10);
+        const pagedGames = allGames.slice(0, 3);
+        const maxPage = Math.ceil(allGames.length / 3);
+        if (page <= 0 || (page - 1) * 3 > allGames.length - 1) {
+            return response.status(404).json(`La página no existe, la primera página es: 1 y la ultima pagina es : ${maxPage}`);
+        }
+        response.status(200).json({
+            movies: allGames.slice(startPage, endPage),
+            nextPage: page + 1 <= maxPage ? page + 1 : null,
+            previousPage: page - 1 < 1 ? null : page - 1
+        });
+    } catch (error) {
+        next(error)
+    }
+});
+gamesRouter.get('/title/:title', async (request, response, next) => {
+    try {
+        const titleGame = request.params.title;
+        const Game = await Game.find({ title: titleGame });
+        if (Game.length === 0) {
+            return next(createError(`No hay ningun Game con el Título: ${titleGame}`, 404))
+        }
+        return response.status(200).json(Game);
+    } catch (error) {
+        next(error)
+    }
+});
+gamesRouter.post('/to-cloud',  [upload.single('picture'), uploadToCloud], async (request, response, next) => {
+
+    try {
+      const newGame = new Game({ ...request.body, picture: request.file_url });
+  
+      const createdGame = await newGame.save();
+  
+      return response.status(201).json(createdGame);
+  
+    } catch (err) {
+  
+      next(err);
+  
+    }
+  
+  });
+gamesRouter.put('/:id',  async (request, response, next) => {
+    try {
+        const id = request.params.id;
+        const modifiedGame = new Game({ ...request.body });
+        modifiedGame._id = id;
+        const updatedGame = await Game.findByIdAndUpdate(
+            id,
+            modifiedGame,
+            { new: true }
+        );
+        if (!updatedGame) {
+            return next(createError(`No se encuentra el Game con el Id: ${id} para actualizarlo`, 404))
+        }
+        return response.status(201).json(updatedGame);
+    } catch (error) {
+        next(error)
+    }
+});
+gamesRouter.delete('/:id', async (request, response, next) => {
+    try {
+        const id = request.params.id;
+       
+        const deletedGame = await Game.findByIdAndDelete(id);
+        if (!deletedGame) {
+            return next(createError(`No se encuentra el Game con el Id: ${id} para eliminarlo`, 404))
+        } else {
+            return response.status(200).json(`Game eliminado con éxito`);
+        }
+    } catch (error) {
+        next(error)
+    }
+});
+
+
+
+
+
+module.exports = gamesRouter;
+
+
