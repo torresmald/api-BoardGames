@@ -1,6 +1,5 @@
 const express = require('express');
 const passport = require('passport');
-const Serie = require('../model/Series');
 const User = require('../model/Users');
 const userRouter = express.Router();
 const createError = require('../utils/errors/createError.js');
