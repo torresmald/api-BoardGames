@@ -14,6 +14,15 @@ gamesRouter.get('/', async (request, response, next) => {
         next(error)
     }
 });
+gamesRouter.get('/:id', async (request, response, next) => {
+    try {
+        const id = request.params.id;
+        const allGames = await Game.find(id);
+        return response.status(200).json(allGames);
+    } catch (error) {
+        next(error)
+    }
+});
 gamesRouter.get('/paged', async (request, response, next) => {
     try {
         let page = request.query.page;
