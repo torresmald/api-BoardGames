@@ -28,7 +28,7 @@ gamesRouter.get('/paged', async (request, response, next) => {
         let page = request.query.page;
         const startPage = (page - 1) * 3;
         const endPage = page * 3;
-        const allGames = await Game.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ year: 1 });
+        const allGames = await Game.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ id: 1 });
         if (allGames.length === 0) {
             return next(createError('No hay Games disponibles', 404))
         }
@@ -99,7 +99,6 @@ gamesRouter.put('/:id',  async (request, response, next) => {
 gamesRouter.delete('/:id', async (request, response, next) => {
     try {
         const id = request.params.id;
-       
         const deletedGame = await Game.findByIdAndDelete(id);
         if (!deletedGame) {
             return next(createError(`No se encuentra el Game con el Id: ${id} para eliminarlo`, 404))
