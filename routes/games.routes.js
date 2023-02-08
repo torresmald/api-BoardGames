@@ -14,21 +14,12 @@ gamesRouter.get('/', async (request, response, next) => {
         next(error)
     }
 });
-gamesRouter.get('/:id', async (request, response, next) => {
-    try {
-        const id = request.params.id;
-        const allGames = await Game.find({id: id});
-        return response.status(200).json(allGames);
-    } catch (error) {
-        next(error)
-    }
-});
 gamesRouter.get('/paged', async (request, response, next) => {
     try {
         let page = request.query.page;
         const startPage = (page - 1) * 3;
         const endPage = page * 3;
-        const allGames = await Game.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ id: 1 });
+        const allGames = await Game.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ title: 1 });
         if (allGames.length === 0) {
             return next(createError('No hay Games disponibles', 404))
         }
@@ -42,10 +33,19 @@ gamesRouter.get('/paged', async (request, response, next) => {
             return response.status(404).json(`La página no existe, la primera página es: 1 y la ultima pagina es : ${maxPage}`);
         }
         response.status(200).json({
-            movies: allGames.slice(startPage, endPage),
+            games: allGames.slice(startPage, endPage),
             nextPage: page + 1 <= maxPage ? page + 1 : null,
             previousPage: page - 1 < 1 ? null : page - 1
         });
+    } catch (error) {
+        next(error)
+    }
+});
+gamesRouter.get('/:id', async (request, response, next) => {
+    try {
+        const id = request.params.id;
+        const allGames = await Game.find({id: id});
+        return response.status(200).json(allGames);
     } catch (error) {
         next(error)
     }
