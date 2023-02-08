@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const boardGamesSchema = new mongoose.Schema({
-    id: Number,
+    id: String,
     title: { type: String, unique: true },
     designer: { type: [String] },
     publisher: String,
