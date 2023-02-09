@@ -62,6 +62,15 @@ gamesRouter.get('/title/:title', async (request, response, next) => {
         next(error)
     }
 });
+gamesRouter.post('/', [upload.single('picture'), uploadToCloud],async (request, response, next) => {
+    try {
+        const newGame = new Game({ ...request.body, picture: request.file_url });
+        const newGameDoc = await newGame.save();
+        return response.status(201).json(newGameDoc);
+    } catch (error) {
+        next(error)
+    }
+});
 gamesRouter.post('/to-cloud',  [upload.single('picture'), uploadToCloud], async (request, response, next) => {
 
     try {
