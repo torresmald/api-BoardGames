@@ -7,7 +7,7 @@
     "year": 2021,
     "category": ["Ameritrash", "Dungeon Crawler"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675588682/descen3_yz4mql.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 2.73,
     "playingTime": "120/180 Min",
     "isForChilds": false
@@ -20,7 +20,7 @@
     "year": 2012,
     "category": ["Ameritrash", "Dungeon Crawler"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675588635/descent2_l3yh4p.webp",
-    "players": "1-5 players",
+    "players": "1/5 Jugadores",
     "weight": 3.21,
     "playingTime": "120 Min",
     "isForChilds": false
@@ -33,7 +33,7 @@
     "year": 2016,
     "category": ["Area Control"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/75_cjqkzh.webp",
-    "players": "2-4 players",
+    "players": "2/4 Jugadores",
     "weight": 1.80,
     "playingTime": "30 Min",
     "isForChilds": true
@@ -46,7 +46,7 @@
     "year": 2020,
     "category": ["Campaign", "Eurogame"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/paleo_c2ufvn.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 2.62,
     "playingTime": "45/60 Min",
     "isForChilds": true
@@ -59,7 +59,7 @@
     "year": 2017,
     "category": ["Area Control"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591651/spirit_orxrxc.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 4.06,
     "playingTime": "90/120 Min",
     "isForChilds": false
@@ -72,7 +72,7 @@
     "year": 2019,
     "category": ["Deck Construction"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/mc_dfh2tm.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 2.91,
     "playingTime": "45/90 Min",
     "isForChilds": false
@@ -85,7 +85,7 @@
     "year": 2011,
     "category": ["Deck Construction"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591604/the_lord_mjjm7n.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 3.20,
     "playingTime": "30/60 Min",
     "isForChilds": false
@@ -98,7 +98,7 @@
     "year": 2016,
     "category": ["Deck Construction"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591604/arkham_biibdx.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 3.52,
     "playingTime": "60/120 Min",
     "isForChilds": false
@@ -111,7 +111,7 @@
     "year": 2021,
     "category": ["Push your Luck"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591569/cubitos_bhooyr.webp",
-    "players": "2-4 players",
+    "players": "2/4 Jugadores",
     "weight": 2.18,
     "playingTime": "30/60 Min",
     "isForChilds": true
@@ -124,7 +124,7 @@
     "year": 2013,
     "category": ["Party Game"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591537/sushi_oaeijw.webp",
-    "players": "2-5 players",
+    "players": "2/5 Jugadores",
     "weight": 1.16,
     "playingTime": "15 Min",
     "isForChilds": true
@@ -137,7 +137,7 @@
     "year": 2019,
     "category": ["Deckbuilding", "Eurogame"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/wingspan_phnyx2.webp",
-    "players": "2-4 players",
+    "players": "2/4 Jugadores",
     "weight": 2.45,
     "playingTime": "40/70 Min",
     "isForChilds": true
@@ -150,7 +150,7 @@
     "year": 2010,
     "category": ["Social Deduction"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/citadels_wxsgco.webp",
-    "players": "2-4 players",
+    "players": "2/4 Jugadores",
     "weight": 2.05,
     "playingTime": "20/60 Min",
     "isForChilds": true
@@ -163,7 +163,7 @@
     "year": 1997,
     "category": ["Party Game"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/jungle_hcbsnp.webp",
-    "players": "2-10 players",
+    "players": "2/10 Jugadores",
     "weight": 1.14,
     "playingTime": "10 Min",
     "isForChilds": true
@@ -176,7 +176,7 @@
     "year": 2018,
     "category": ["Deck Construction"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/cubirds_yy0r6y.webp",
-    "players": "2-5 players",
+    "players": "2/5 Jugadores",
     "weight": 1.31,
     "playingTime": "20 Min",
     "isForChilds": true
@@ -189,7 +189,7 @@
     "year": 2019,
     "category": ["Deckbuilding", "Campaign"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/clanks_powecn.webp",
-    "players": "2-4 players",
+    "players": "2/4 Jugadores",
     "weight": 2.74,
     "playingTime": "90/120 Min",
     "isForChilds": false
@@ -202,7 +202,7 @@
     "year": 2018,
     "category": ["Deckbuilding"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/rocket_ghuvck.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 2.58,
     "playingTime": "30/90 Min",
     "isForChilds": false
@@ -215,7 +215,7 @@
     "year": 1995,
     "category": ["Eurogame"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591468/catan_k5dwwi.webp",
-    "players": "3-4 players",
+    "players": "3/4 Jugadores",
     "weight": 2.30,
     "playingTime": "60/120 Min",
     "isForChilds": false
@@ -228,7 +228,7 @@
     "year": 2016,
     "category": ["Deckbuilding"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/hp_tsm0oa.webp",
-    "players": "2-4 players",
+    "players": "2/4 Jugadores",
     "weight": 2.08,
     "playingTime": "30/60 Min",
     "isForChilds": true
@@ -241,7 +241,7 @@
     "year": 2021,
     "category": ["Eurogame"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/ark_c8df5q.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 3.71,
     "playingTime": "90/150 Min",
     "isForChilds": false
@@ -254,7 +254,7 @@
     "year": 2017,
     "category": ["Party Game"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/smart_zau1pa.webp",
-    "players": "2-8 players",
+    "players": "2/8 Jugadores",
     "weight": 1.20,
     "playingTime": "20/120 Min",
     "isForChilds": true
@@ -267,7 +267,7 @@
     "year": 2020,
     "category": ["Party Game"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591409/abandon_hsmnx9.webp",
-    "players": "2-4 players",
+    "players": "2/4 Jugadores",
     "weight": 1.32,
     "playingTime": "20 Min",
     "isForChilds": true
@@ -280,7 +280,7 @@
     "year": 2020,
     "category": ["Eurogame"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/the_red_wpgfqw.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 2.80,
     "playingTime": "80 Min",
     "isForChilds": false
@@ -293,7 +293,7 @@
     "year": 2021,
     "category": ["Party Game"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/bitoku_u00tkn.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 3.71,
     "playingTime": "120 Min",
     "isForChilds": false  
@@ -306,7 +306,7 @@
     "year": 2020,
     "category": ["Eurogame", "Deckbuilding"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/arnak_hxi6f4.webp",
-    "players": "1-4 players",
+    "players": "1/4 Jugadores",
     "weight": 2.89,
     "playingTime": "30/120 Min",
     "isForChilds": false
@@ -319,7 +319,7 @@
     "year": 2016,
     "category": ["Eurogame"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/mars_wdzeav.webp",
-    "players": "1-5 players",
+    "players": "1/5 Jugadores",
     "weight": 3.26,
     "playingTime": "120 Min",
     "isForChilds": false
@@ -332,7 +332,7 @@
     "year": 2015,
     "category": ["Party Game"],
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591348/codenames_xmgec8.webp",
-    "players": "2-8 players",
+    "players": "2/8 Jugadores",
     "weight": 1.27,
     "playingTime": "15 Min",
     "isForChilds": true
