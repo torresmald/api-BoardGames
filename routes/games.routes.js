@@ -44,7 +44,7 @@ gamesRouter.get('/paged', async (request, response, next) => {
 gamesRouter.get('/:id', async (request, response, next) => {
     try {
         const id = request.params.id;
-        const allGames = await Game.find({id: id});
+        const allGames = await Game.findOne({id: id});
         return response.status(200).json(allGames);
     } catch (error) {
         next(error)
