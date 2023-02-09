@@ -9,7 +9,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675588682/descen3_yz4mql.webp",
     "players": "1/4 Jugadores",
     "weight": 2.73,
-    "playingTime": "120/180 Min",
+    "playingTime": "2/3 Horas",
     "isForChilds": false
   },
   {
@@ -22,7 +22,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675588635/descent2_l3yh4p.webp",
     "players": "1/5 Jugadores",
     "weight": 3.21,
-    "playingTime": "120 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false
   },
   {
@@ -35,7 +35,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/75_cjqkzh.webp",
     "players": "2/4 Jugadores",
     "weight": 1.80,
-    "playingTime": "30 Min",
+    "playingTime": "30 Minutos",
     "isForChilds": true
   },
   {
@@ -48,7 +48,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/paleo_c2ufvn.webp",
     "players": "1/4 Jugadores",
     "weight": 2.62,
-    "playingTime": "45/60 Min",
+    "playingTime": "1 Hora",
     "isForChilds": true
   },
   {
@@ -61,7 +61,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591651/spirit_orxrxc.webp",
     "players": "1/4 Jugadores",
     "weight": 4.06,
-    "playingTime": "90/120 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false
   },
   {
@@ -74,7 +74,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/mc_dfh2tm.webp",
     "players": "1/4 Jugadores",
     "weight": 2.91,
-    "playingTime": "45/90 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false
   },
   {
@@ -87,7 +87,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591604/the_lord_mjjm7n.webp",
     "players": "1/4 Jugadores",
     "weight": 3.20,
-    "playingTime": "30/60 Min",
+    "playingTime": "30/60 Minutos",
     "isForChilds": false
   },
   {
@@ -100,7 +100,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591604/arkham_biibdx.webp",
     "players": "1/4 Jugadores",
     "weight": 3.52,
-    "playingTime": "60/120 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false
   },
   {
@@ -113,7 +113,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591569/cubitos_bhooyr.webp",
     "players": "2/4 Jugadores",
     "weight": 2.18,
-    "playingTime": "30/60 Min",
+    "playingTime": "30/60 Minutos",
     "isForChilds": true
   },
   {
@@ -126,7 +126,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591537/sushi_oaeijw.webp",
     "players": "2/5 Jugadores",
     "weight": 1.16,
-    "playingTime": "15 Min",
+    "playingTime": "15 Minutos",
     "isForChilds": true
   },
   {
@@ -139,7 +139,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/wingspan_phnyx2.webp",
     "players": "2/4 Jugadores",
     "weight": 2.45,
-    "playingTime": "40/70 Min",
+    "playingTime": "30/60 Minutos",
     "isForChilds": true
   },
   {
@@ -152,7 +152,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/citadels_wxsgco.webp",
     "players": "2/4 Jugadores",
     "weight": 2.05,
-    "playingTime": "20/60 Min",
+    "playingTime": "30/60 Minutos",
     "isForChilds": true
   },
   {
@@ -165,7 +165,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/jungle_hcbsnp.webp",
     "players": "2/10 Jugadores",
     "weight": 1.14,
-    "playingTime": "10 Min",
+    "playingTime": "-15 Minutos",
     "isForChilds": true
   },
   {
@@ -178,7 +178,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/cubirds_yy0r6y.webp",
     "players": "2/5 Jugadores",
     "weight": 1.31,
-    "playingTime": "20 Min",
+    "playingTime": "15 Minutos",
     "isForChilds": true
   },
   {
@@ -191,7 +191,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/clanks_powecn.webp",
     "players": "2/4 Jugadores",
     "weight": 2.74,
-    "playingTime": "90/120 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false
   },
   {
@@ -204,7 +204,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/rocket_ghuvck.webp",
     "players": "1/4 Jugadores",
     "weight": 2.58,
-    "playingTime": "30/90 Min",
+    "playingTime": "30/60 Minutos",
     "isForChilds": false
   },
   {
@@ -217,7 +217,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591468/catan_k5dwwi.webp",
     "players": "3/4 Jugadores",
     "weight": 2.30,
-    "playingTime": "60/120 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false
   },
   {
@@ -230,7 +230,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591347/hp_tsm0oa.webp",
     "players": "2/4 Jugadores",
     "weight": 2.08,
-    "playingTime": "30/60 Min",
+    "playingTime": "30/60 Minutos",
     "isForChilds": true
   },
   {
@@ -243,7 +243,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/ark_c8df5q.webp",
     "players": "1/4 Jugadores",
     "weight": 3.71,
-    "playingTime": "90/150 Min",
+    "playingTime": "2/3 Horas",
     "isForChilds": false
   },
   {
@@ -256,7 +256,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/smart_zau1pa.webp",
     "players": "2/8 Jugadores",
     "weight": 1.20,
-    "playingTime": "20/120 Min",
+    "playingTime": "30/60 Minutos",
     "isForChilds": true
   },
   {
@@ -269,7 +269,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591409/abandon_hsmnx9.webp",
     "players": "2/4 Jugadores",
     "weight": 1.32,
-    "playingTime": "20 Min",
+    "playingTime": "15 Minutos",
     "isForChilds": true
   },
   {
@@ -282,7 +282,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/the_red_wpgfqw.webp",
     "players": "1/4 Jugadores",
     "weight": 2.80,
-    "playingTime": "80 Min",
+    "playingTime": "1 Hora",
     "isForChilds": false
   },
   {
@@ -295,7 +295,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/bitoku_u00tkn.webp",
     "players": "1/4 Jugadores",
     "weight": 3.71,
-    "playingTime": "120 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false  
   },
   {
@@ -308,12 +308,12 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/arnak_hxi6f4.webp",
     "players": "1/4 Jugadores",
     "weight": 2.89,
-    "playingTime": "30/120 Min",
+    "playingTime": "1/2 Horas",
     "isForChilds": false
   },
   {
     "id": "25",
-    "title": "Terraforming Mars",
+    "title": "TerraforMinutosg Mars",
     "designer": ["Jacob Fryxelius"],
     "publisher": "Maldito Games",
     "year": 2016,
@@ -321,7 +321,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591346/mars_wdzeav.webp",
     "players": "1/5 Jugadores",
     "weight": 3.26,
-    "playingTime": "120 Min",
+    "playingTime": "2/3 Horas",
     "isForChilds": false
   },
   {
@@ -334,7 +334,7 @@
     "picture": "https://res.cloudinary.com/dpyvlsksj/image/upload/v1675591348/codenames_xmgec8.webp",
     "players": "2/8 Jugadores",
     "weight": 1.27,
-    "playingTime": "15 Min",
+    "playingTime": "15 Minutos",
     "isForChilds": true
   }
 ]
