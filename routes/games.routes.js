@@ -71,22 +71,7 @@ gamesRouter.post('/', [upload.single('picture'), uploadToCloud],async (request, 
         next(error)
     }
 });
-gamesRouter.post('/to-cloud',  [upload.single('picture'), uploadToCloud], async (request, response, next) => {
 
-    try {
-      const newGame = new Game({ ...request.body, picture: request.file_url });
-  
-      const createdGame = await newGame.save();
-  
-      return response.status(201).json(createdGame);
-  
-    } catch (err) {
-  
-      next(err);
-  
-    }
-  
-  });
 gamesRouter.put('/:id',  async (request, response, next) => {
     try {
         const id = request.params.id;
