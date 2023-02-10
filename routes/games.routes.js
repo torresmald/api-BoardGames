@@ -2,13 +2,13 @@ const express = require('express');
 const gamesRouter = express.Router();
 const Game = require('../model/Games');
 const createError = require('../utils/errors/createError.js');
-const uploadToCloud = require ('../utils/middlewares/cloudinary.js');
+const uploadToCloud = require('../utils/middlewares/cloudinary.js');
 const upload = require('../utils/middlewares/files.middleware.js');
 
 
 gamesRouter.get('/', async (request, response, next) => {
     try {
-        const allGames = await Game.find().sort({title: 1});
+        const allGames = await Game.find().sort({ title: 1 });
         return response.status(200).json(allGames);
     } catch (error) {
         next(error)
@@ -44,7 +44,7 @@ gamesRouter.get('/paged', async (request, response, next) => {
 gamesRouter.get('/:id', async (request, response, next) => {
     try {
         const id = request.params.id;
-        const allGames = await Game.findOne({id: id});
+        const allGames = await Game.findOne({ id: id });
         return response.status(200).json(allGames);
     } catch (error) {
         next(error)
@@ -62,10 +62,18 @@ gamesRouter.get('/title/:title', async (request, response, next) => {
         next(error)
     }
 });
-gamesRouter.post('/', [upload.single('picture'), uploadToCloud],async (request, response, next) => {
+gamesRouter.post('/', [upload.single('picture'), uploadToCloud], async (request, response, next) => {
     try {
         //Necesito el ultimo ID y poner el siguiente en el campo id.
-        const newGame = new Game({ ...request.body});
+        const allGames = await Game.find();
+        let maxId = 0;
+        allGames.forEach((game) => {
+            let id = parseInt(game.id);
+            if (id >= maxId) {
+                maxId = id + 1;
+            }
+        });
+        const newGame = new Game({ ...request.body, id: maxId });
         const newGameDoc = await newGame.save();
         return response.status(201).json(newGameDoc);
     } catch (error) {
@@ -73,7 +81,7 @@ gamesRouter.post('/', [upload.single('picture'), uploadToCloud],async (request, 
     }
 });
 
-gamesRouter.put('/:id',  async (request, response, next) => {
+gamesRouter.put('/:id', async (request, response, next) => {
     try {
         const id = request.params.id;
         const modifiedGame = new Game({ ...request.body });
