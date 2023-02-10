@@ -64,6 +64,7 @@ gamesRouter.get('/title/:title', async (request, response, next) => {
 });
 gamesRouter.post('/', [upload.single('picture'), uploadToCloud],async (request, response, next) => {
     try {
+        //Necesito el ultimo ID y poner el siguiente en el campo id.
         const newGame = new Game({ ...request.body});
         const newGameDoc = await newGame.save();
         return response.status(201).json(newGameDoc);
@@ -76,7 +77,7 @@ gamesRouter.put('/:id',  async (request, response, next) => {
     try {
         const id = request.params.id;
         const modifiedGame = new Game({ ...request.body });
-        modifiedGame._id = id;
+        modifiedGame.id = id;
         const updatedGame = await Game.findByIdAndUpdate(
             id,
             modifiedGame,
