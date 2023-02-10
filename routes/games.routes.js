@@ -8,7 +8,7 @@ const upload = require('../utils/middlewares/files.middleware.js');
 
 gamesRouter.get('/', async (request, response, next) => {
     try {
-        const allGames = await Game.find();
+        const allGames = await Game.find().sort({title: 1});
         return response.status(200).json(allGames);
     } catch (error) {
         next(error)
