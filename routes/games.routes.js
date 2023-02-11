@@ -67,8 +67,8 @@ gamesRouter.post('/', [upload.single('picture'), uploadToCloud], async (request,
         //Necesito el ultimo ID y poner el siguiente en el campo id.
         const allGames = await Game.find();
         let maxId = 0;
-        allGames.forEach((game) => {
-            let id = parseInt(game.id);
+        allGames.forEach((boardGame) => {
+            let id = parseInt(boardGame.id);
             if (id >= maxId) {
                 maxId = id + 1;
             }
@@ -84,8 +84,8 @@ gamesRouter.post('/', [upload.single('picture'), uploadToCloud], async (request,
 gamesRouter.put('/:id', async (request, response, next) => {
     try {
         const id = request.params.id;
-        const modifiedGame = new Game({ ...request.body });
-        modifiedGame.id = id;
+        const modifiedGame = new Game({ ...request.body});
+        modifiedGame._id = id;
         const updatedGame = await Game.findByIdAndUpdate(
             id,
             modifiedGame,
