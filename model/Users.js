@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     },
     password: { type: String, required: true },
     picture: String,
-    age: { type: String, enum: ["Child", "Adult"], required: true},
+    age: { type: Number, min: 10, max: 90, required: true},
     nickname: { type: String},
     favoriteGames: [{ type: mongoose.Types.ObjectId, ref: 'Game' }]
 },
