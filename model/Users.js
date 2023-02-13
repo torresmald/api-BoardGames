@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
     },
     password: { type: String, required: true },
     picture: String,
-    age: { type: Number, min: 10, max: 90, required: true},
+    age: { type: String, required: true},
     nickname: { type: String},
     favoriteGames: [{ type: mongoose.Types.ObjectId, ref: 'Game' }]
 },
