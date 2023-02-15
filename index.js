@@ -25,11 +25,11 @@ cloudinary.config({
   api_secret: process.env.API_SECRET
 });
 
-const whitelist = ['http://localhost:4200']
+const whitelist = ['http://localhost:4200', 'http://localhost:3000']
 const corsOptions = {
   credentials: true,
   origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1 || !!origin) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
       callback(null, true)
     } else {
       callback(new Error('Not allowed by CORS'))
