@@ -14,7 +14,7 @@ gamesRouter.get('/', async (request, response, next) => {
         next(error)
     }
 });
-gamesRouter.get('/paged', [isAuth] ,async (request, response, next) => {
+gamesRouter.get('/paged', async (request, response, next) => {
     try {
         let page = request.query.page;
         const startPage = (page - 1) * 3;
