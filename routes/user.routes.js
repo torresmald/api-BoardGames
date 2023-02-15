@@ -70,7 +70,6 @@ userRouter.post('/register', async (request, response, next) => {
 // });
 userRouter.post('/login', async (request, response, next) => {
     const { email, password } = request.body;
-
     const user = await User.findOne({ email });
     if (!user) {
         return next(createError('El usuario no existe'), 404);
