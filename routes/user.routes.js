@@ -3,7 +3,7 @@ const passport = require('passport');
 const User = require('../model/Users');
 const userRouter = express.Router();
 const createError = require('../utils/errors/createError.js');
-const isAuthAdmin = require('../utils/middlewares/authAdmin.middleware.js');
+const isAuth = require('../utils/middlewares/auth.middleware.js');
 
 userRouter.get('/', async (request, response, next) => {
     try {
@@ -15,6 +15,9 @@ userRouter.get('/', async (request, response, next) => {
     } catch (error) {
         return next(error)
     }
+})
+userRouter.get('/checkIsLogged',[isAuth], async (request, response, next) => {
+    return response.status(200).json(request.user)
 })
 userRouter.post('/register' , async (request, response, next) => {
     const done = (error, user) => {

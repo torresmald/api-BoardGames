@@ -4,7 +4,7 @@ const Game = require('../model/Games');
 const createError = require('../utils/errors/createError.js');
 const uploadToCloud = require('../utils/middlewares/cloudinary.js');
 const upload = require('../utils/middlewares/files.middleware.js');
-
+const isAuth = require ('../utils/middlewares/auth.middleware.js')
 
 gamesRouter.get('/', async (request, response, next) => {
     try {
@@ -14,7 +14,7 @@ gamesRouter.get('/', async (request, response, next) => {
         next(error)
     }
 });
-gamesRouter.get('/paged', async (request, response, next) => {
+gamesRouter.get('/paged', [isAuth] ,async (request, response, next) => {
     try {
         let page = request.query.page;
         const startPage = (page - 1) * 3;
@@ -64,7 +64,6 @@ gamesRouter.get('/title/:title', async (request, response, next) => {
 });
 gamesRouter.post('/', [upload.single('picture'), uploadToCloud], async (request, response, next) => {
     try {
-        //Necesito el ultimo ID y poner el siguiente en el campo id.
         const allGames = await Game.find();
         let maxId = 0;
         allGames.forEach((boardGame) => {
