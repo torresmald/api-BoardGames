@@ -98,7 +98,7 @@ gamesRouter.put('/:id', [isAuth] ,async (request, response, next) => {
         next(error)
     }
 });
-gamesRouter.delete('/:id', async (request, response, next) => {
+gamesRouter.delete('/:id', [isAuth] ,async (request, response, next) => {
     try {
         const id = request.params.id;
         const deletedGame = await Game.findByIdAndDelete(id);
@@ -111,9 +111,6 @@ gamesRouter.delete('/:id', async (request, response, next) => {
         next(error)
     }
 });
-
-
-
 
 
 module.exports = gamesRouter;

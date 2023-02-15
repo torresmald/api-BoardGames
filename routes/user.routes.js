@@ -18,9 +18,6 @@ userRouter.get('/', async (request, response, next) => {
         return next(error)
     }
 })
-// userRouter.get('/checkIsLogged', [isAuth], async (request, response, next) => {
-//     return response.status(200).json(request.user)
-// })
 userRouter.post('/register', async (request, response, next) => {
     const done = (error, user) => {
         if (error) {
