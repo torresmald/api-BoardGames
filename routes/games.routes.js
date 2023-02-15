@@ -62,7 +62,7 @@ gamesRouter.get('/title/:title', async (request, response, next) => {
         next(error)
     }
 });
-gamesRouter.post('/', [upload.single('picture'), uploadToCloud], async (request, response, next) => {
+gamesRouter.post('/', [upload.single('picture'), uploadToCloud, isAuth], async (request, response, next) => {
     try {
         const allGames = await Game.find();
         let maxId = 0;
@@ -80,7 +80,7 @@ gamesRouter.post('/', [upload.single('picture'), uploadToCloud], async (request,
     }
 });
 
-gamesRouter.put('/:id', async (request, response, next) => {
+gamesRouter.put('/:id', [isAuth] ,async (request, response, next) => {
     try {
         const id = request.params.id;
         const modifiedGame = new Game({ ...request.body});
