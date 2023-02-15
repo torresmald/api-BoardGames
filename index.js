@@ -25,18 +25,18 @@ cloudinary.config({
   api_secret: process.env.API_SECRET
 });
 
-const whitelist = ['http://localhost:4200', 'http://localhost:3000']
-const corsOptions = {
-  credentials: true,
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-};
-server.use(cors(corsOptions));
+// const whitelist = ['http://localhost:4200', 'http://localhost:3000']
+// const corsOptions = {
+//   credentials: true,
+//   origin: function (origin, callback) {
+//     if (whitelist.indexOf(origin) !== -1 || !origin) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error('Not allowed by CORS'))
+//     }
+//   }
+// };
+server.use(cors());
 require('./utils/authentication/passport.js');
 server.use(session({
   secret: process.env.SESSION_SECRET_KEY,
