@@ -25,7 +25,7 @@ cloudinary.config({
   api_secret: process.env.API_SECRET
 });
 
-const whitelist = ['http://localhost:3000', 'http://localhost:4200' ]
+const whitelist = ['http://localhost:3000', 'http://localhost:4200', 'https://board-game-list.web.app/']
 const corsOptions = {
   credentials: true,
   origin: function(origin, callback) {
