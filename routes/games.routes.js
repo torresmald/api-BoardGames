@@ -17,8 +17,8 @@ gamesRouter.get('/', async (request, response, next) => {
 gamesRouter.get('/paged', async (request, response, next) => {
     try {
         let page = request.query.page;
-        const startPage = (page - 1) * 3;
-        const endPage = page * 3;
+        const startPage = (page - 1) * 5;
+        const endPage = page * 5;
         const allGames = await Game.find({}, { createdAt: 0, updatedAt: 0, __v: 0 }).sort({ title: 1 });
         if (allGames.length === 0) {
             return next(createError('No hay Games disponibles', 404))
@@ -27,9 +27,9 @@ gamesRouter.get('/paged', async (request, response, next) => {
             return next(createError('No se ha indicado un número de página valido', 404))
         }
         page = parseInt(page, 10);
-        const pagedGames = allGames.slice(0, 3);
-        const maxPage = Math.ceil(allGames.length / 3);
-        if (page <= 0 || (page - 1) * 3 > allGames.length - 1) {
+        const pagedGames = allGames.slice(0, 5);
+        const maxPage = Math.ceil(allGames.length / 5);
+        if (page <= 0 || (page - 1) * 5 > allGames.length - 1) {
             return response.status(404).json(`La página no existe, la primera página es: 1 y la ultima pagina es : ${maxPage}`);
         }
         response.status(200).json({
