@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 const DB_URL = process.env.DB_URL;
 const server = express();
 const gamesRouter = require('./routes/games.routes.js');
+const myGamesRouter = require('./routes/myGames.routes');
 const categoriesRouter = require('./routes/categories.routes.js');
 const userRouter = require('./routes/user.routes.js');
 const connect = require('./utils/db/connect.js');
@@ -64,6 +65,7 @@ server.get('/', (request, response) => {
 
 server.use('/users', userRouter);
 server.use('/games', gamesRouter);
+server.use('/mygames', myGamesRouter);
 server.use('/categories', categoriesRouter);
 server.use('*', (request, response, next) => {
   next(createError(`Esta ruta no existe`, 404))

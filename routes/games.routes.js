@@ -14,6 +14,7 @@ gamesRouter.get('/', async (request, response, next) => {
         next(error)
     }
 });
+
 gamesRouter.get('/paged', async (request, response, next) => {
     try {
         let page = request.query.page;
@@ -111,6 +112,7 @@ gamesRouter.delete('/:id', [isAuth] ,async (request, response, next) => {
         next(error)
     }
 });
+
 
 
 module.exports = gamesRouter;
