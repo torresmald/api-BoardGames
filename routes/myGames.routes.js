@@ -14,7 +14,15 @@ myGamesRouter.get('/', async (request, response, next) => {
         next(error)
     }
 });
-
+myGamesRouter.get('/:id', async (request, response, next) => {
+    try {
+        const id = request.params.id;
+        const allGames = await MyGame.findOne({ id: id });
+        return response.status(200).json(allGames);
+    } catch (error) {
+        next(error)
+    }
+});
 myGamesRouter.post('/', [upload.single('picture'), uploadToCloud, isAuth], async (request, response, next) => {
     try {
         const allGames = await MyGame.find();
