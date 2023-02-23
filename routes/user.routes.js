@@ -35,36 +35,7 @@ userRouter.post('/register', async (request, response, next) => {
     }
     passport.authenticate('register', done)(request);
 });
-// userRouter.post('/login', async (request, response, next) => {
-//     const done = (error, user) => {
-//         if (error) {
-//             return next(error);
-//         }
-//         request.logIn(
-//             user,
-//             (error) => {
-//                 if (error) {
-//                     return next(error);
-//                 }
-//                 return response.status(200).json(user);
-//             }
-//         )
-//     }
-//     passport.authenticate('login', done)(request);
-// });
 
-// userRouter.post('/logout', async (request, response, next) => {
-//     if (request.user) {
-//         request.logOut(() => {
-//             request.session.destroy(() => {
-//                 response.clearCookie('connect.sid');
-//                 response.status(200).json('Te has deslogueado con éxito')
-//             })
-//         })
-//     } else {
-//         return response.status(304).json('No hay usuario logueado')
-//     }
-// });
 userRouter.post('/login', async (request, response, next) => {
     const { email, password } = request.body;
     const user = await User.findOne({ email });

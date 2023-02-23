@@ -40,7 +40,24 @@ myGamesRouter.post('/', [upload.single('picture'), uploadToCloud, isAuth], async
         next(error)
     }
 });
-
+myGamesRouter.put('/:id', [isAuth] ,async (request, response, next) => {
+    try {
+        const id = request.params.id;
+        const modifiedGame = new MyGame({ ...request.body});
+        modifiedGame._id = id;
+        const updatedGame = await MyGame.findByIdAndUpdate(
+            id,
+            modifiedGame,
+            { new: true }
+        );
+        if (!updatedGame) {
+            return next(createError(`No se encuentra el Game con el Id: ${id} para actualizarlo`, 404))
+        }
+        return response.status(201).json(updatedGame);
+    } catch (error) {
+        next(error)
+    }
+});
 myGamesRouter.delete('/:id', [isAuth] ,async (request, response, next) => {
     try {
         const id = request.params.id;
